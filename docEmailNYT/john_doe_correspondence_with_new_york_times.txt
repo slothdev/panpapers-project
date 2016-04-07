@@ -1,1 +1,160 @@
 
+***off the record / do not quote / do not reveal e-mail address***
+
+i am the panama papers source (john doe). yesterday i attempted to send a version of this message to david uberti at the columbia journalism review, but the email service i used was less than reliable so i cannot be sure that the message was sent.
+
+there has been public concern about united states media coverage of the panama papers story, and the nyt's extremely delayed coverage in particular. in several articles [ http://www.nytimes.com/2016/04/06/business/media/how-a-cryptic-message-interested-in-data-led-to-the-panama-papers.html, http://publiceditor.blogs.nytimes.com/2016/04/04/why-no-big-splash-for-panama-papers ] the nyt has now repeated two core assertions that are completely false:
+
+1. "The ICIJ did not approach to The New York Times to participate."
+2. “We didn’t know these documents were out there and being worked on"
+
+i take personal offense at these lies. whistleblowers are under enough pressure as it is without having to worry if they can actually trust the media organizations they approach. the public editor's post in particular raises more questions than it answers: why were these lies allowed in her justification? who approved them? in how many articles were they stated? why was the piece written in such a confusing way as to suggest that icij was at fault for discouraging cooperation (which is ridiculous given that this appears to be the most cooperative and inclusive endeavor in the history of journalism)?
+
+not only did i approach the nyt before any other media outlet, but i also provided sample documents--the same ones i provided to sz/icij--and when your reporters couldn't decipher their meaning i even attempted to explain their significance. furthermore i tried to be as clear as possible, without taking excessive risk, that many more documents of significance were available. your reporter chose vacation instead. it is evident from the e-mail thread below that your reporter even consulted her editors.
+
+i approached nyt. you passed. i encouraged icij to approach nyt. my understanding then and now is that icij did, and you passed a second time. i expect better from the times. stop lying to your readers.
+
+- no one
+
+-----Original Message-----
+From: Saul, Stephanie <sauls@nytimes.com>
+To: [REDACTED]
+Sent: Sun, Feb 22, 2015 1:38 pm
+Subject: Re: shell companies
+
+Ok. Let us take a look at this. If we decide to do it, it will be big. It might take a while so be patient.
+Stephanie
+
+Stephanie Saul
+Staff Writer
+The New York Times
+212-556-5931
+917-453-7047
+
+On Sat, Feb 21, 2015 at 3:49 PM, <[REDACTED]> wrote:
+it goes somewhat beyond real estate. with context from the lawsuits, these documents should put pressure on the president of argentina to resign. $24 million is a lot of money to embezzle, let alone $65.
+
+http://factcheckargentina.org/the-lazaro-baez-money-trails/
+
+-----Original Message-----
+From: Saul, Stephanie <sauls@nytimes.com>
+To: [REDACTED]
+Sent: Tue, Feb 24, 2015 4:51 pm
+Subject: Re: shell companies
+
+Not entirely sure what any of this proves. It's been reported that Fintech is connected to Hapsa.
+
+Stephanie Saul
+Staff Writer
+The New York Times
+212-556-5931
+917-453-7047
+
+On Sun, Feb 22, 2015 at 1:03 PM, <[REDACTED]> wrote:
+also:
+
+document 82 in the same case is the judge's order to unseal, with certain minor redactions, some deposition testimony. at the end of the order it mentions that there will be a court hearing on march 9.
+
+for this story to have maximum impact, that's the timeframe involved.
+
+-----Original Message-----
+From: Saul, Stephanie <sauls@nytimes.com>
+To: [REDACTED]
+Sent: Wed, Feb 25, 2015 4:27 pm
+Subject: Re: shell companies
+
+Sorry meant Val de Loire
+
+Stephanie Saul
+Staff Writer
+The New York Times
+212-556-5931
+917-453-7047
+
+On Wed, Feb 25, 2015 at 9:33 AM, <[REDACTED]> wrote:
+i will respond to the rest of your message shortly, but while i work on that, first would you able to point me to where you are reading reports that fintech holdings is an investor in hapsa?
+
+-----Original Message-----
+From: Saul, Stephanie <sauls@nytimes.com>
+To: [REDACTED]
+Sent: Thu, Feb 26, 2015 1:35 pm
+Subject: Re: shell companies
+
+We are going to look over all this stuff and I will discuss with my editors. One problem is that this Singer/ NML case has been hanging around for eons and written about extensively, and people remember. I would have to spin the story around LLC secrecy in Nevada. That's doable, but not by your March 9 date. Plus, I am leaving town for a week. In other words, not going to be published by March 9. Thanks.
+
+Stephanie Saul
+Staff Writer
+The New York Times
+212-556-5931
+917-453-7047
+
+On Wed, Feb 25, 2015 at 4:07 PM, <[REDACTED]> wrote:
+ok.
+
+i would suggest these links as background reading if you have not come across them already:
+
+http://en.wikipedia.org/wiki/Federico_Elaskar
+http://www.casinoenterprisemanagement.com/articles/october-2010/gaming-buenos-aires
+
+you should have received a 2007 contract involving val de loire and a panamanian company called endell resources. it's a contract for a $6 million bribe paid by a spanish gaming conglomerate through a shell to secure casino rights. at the time, the casinos were a highly controversial issue (see discussion of riots in the link above). to my knowledge the bribe was never reported because no one knows about it.
+
+so, what kind of article should you write? it's a fair question. as i see it there are three levels here: the smallest one being the new, as-yet-unreported individual items i am bringing to your attention right now; the middle being the general story of the kirchner money laundering enterprise with all of the details in one place (and in english); and the largest being a series similar to your series on ny real estate, except going far beyond real estate to various key figures and the 1%.
+
+if i were a reporter i would pitch my editors on the last: another series, with the kirchner tale being the first story in it, because as i said before, this is just the tip of the iceberg and i cannot disclose the rest yet without risking too much. if you bear with me, it could be an extremely important series for the newspaper with an extremely serious impact.
+
+as to your three points: i think you may be missing some things, which is totally understandable because the web of shell companies involved is amazingly complex and as might be expected, spans the globe.
+
+first, the agreement between val de loire and hapsa is not a typical shareholder arrangement. in fact it's quite peculiar. for one thing it is one of several similar agreements that have been going back and forth for years. the key point is that val de loire is not just a shareholder, as has been reported; it is also having hapsa loan it millions worth of bonds issued by the government, again and again and again, with some arrangement also involving its shareholder dividends. i don't know why, but most shareholders don't have such an arrangement in place even once, let alone on a regular basis.
+
+second, val de loire's involvement with its $6 million "commission" for helping the casino rights sail through (and who exactly made those deals work?) was so unusual that it raised red flags even with the lawyers, who did not understand what the payment was for and who said they would never sign their contracts involving casinos again. it can be presumed that endell is a shell corporation for CIRSA.
+
+third, it's not clear why val de loire is buying insurance on race horses. given its connection to hapsa it could indicate that some kind of insurance fraud is taking place, or it could just be a good business practice. i'm not sure if major independent shareholders of racetracks typically buy insurance on their horses, but that relationship has not been reported to my knowledge.
+
+fourth, the fintech holdings document demonstrates that patricia amunategui lied in writing before a federal judge, in not one, but two of the nml capital cases. in 14-cv-01573 document 21-1, also reproduced in 14-cv-00492 document 80-2, she states in paragraph 7, "I do not have any actual or alleged connection to NML's investigation." yet the fintech document shows her signature *on behalf of aldyne ltd., which is an integral part of the nml investigation (and the prosecutor's investigation in argentina). she is actually "Secretaria Asistente" of aldyne, despite her claims of being a random private individual who got tied up in the wrong job with no real connection to anything.
+
+fifth, the same document links fintech to an accountant in argentina, juan sebastian aldo basso.
+
+sixth, the huston document demonstrates that it is *controlled entirely* by helvetic services group, which is already linked to lazaro baez and the kirchner family. it has already been reported by clarin (see http://www.clarin.com/politica/Identifican-duenos-empresa-clave-dinero_0_1180082023.html) that the companies were linked through real estate investments, but not that one actually controlled the other.
+
+it's already known that kirchner's family runs some hotels that are also linked to baez (who put $14 million into them for no reason). so between the hotels and the casinos and the racetrack it would appear that kirchner hasn't just laundered some government money and let it sit in a swiss bank account. a group of people is *actively growing* vice and entertainment businesses on her behalf, and they are using government money to do it.
+
+-----Original Message-----
+From: Saul, Stephanie <sauls@nytimes.com>
+To: [REDACTED]
+Sent: Thu, Feb 26, 2015 4:59 pm
+Subject: Re: shell companies
+
+Yes, I had wondered if you were connected to this prosecutor, but given your intimate knowledge of the litigation, I now think you're someone connected to the court case. Obviously the Kirchners are newsworthy.
+Thanks
+
+Stephanie Saul
+Staff Writer
+The New York Times
+212-556-5931
+917-453-7047
+
+On Thu, Feb 26, 2015 at 11:52 AM, <[REDACTED]> wrote:
+fair enough.
+
+to me, news of a $6 million bribe paid to the president's shell company seems pretty relevant given that this just went up on the home page.
+
+http://www.nytimes.com/2015/02/27/world/americas/argentine-judge-rejects-criminal-case-against-president.html
+
+-----Original Message-----
+From: Saul, Stephanie <sauls@nytimes.com>
+To: [REDACTED]
+Sent: Fri, Feb 27, 2015 1:56 pm
+Subject: Re: shell companies
+
+I'm more curious than skeptical.
+
+Stephanie Saul
+Staff Writer
+The New York Times
+212-556-5931
+917-453-7047
+
+On Thu, Feb 26, 2015 at 4:49 PM, <[REDACTED]> wrote:
+also, if you're skeptical, know that i could have sold the documents i'm sending you to nml capital. i haven't done that. as far as i know they don't have any of them--if they did, they would have been submitted them on the record already. feel free to call them or their lawyers to verify.
+
+***off the record / do not quote***
