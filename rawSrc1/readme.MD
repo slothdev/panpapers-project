@@ -1,4 +1,6 @@
-rows | filepath
+> Manifest of rawSrc2.zip
+
+rows | filename
 -----|---------
 277 | countriesNW.csv
 562016 | edges_1DNW.csv
