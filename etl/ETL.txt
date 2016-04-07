@@ -1,1 +1,125 @@
+# Author: Edwin Seah Poh San
+# DateCreated: 20160406
+# DataSource: http://icij-uploads.s3-website-us-east-1.amazonaws.com/2013/10/offshore/csv.zip
+# Readme: This ETL file contains notes for the loading of the dataset from ICIJ into
+# a graph database (Neo4j). There is another set in circulation which only includes nodes/edges.
+# This ETL file is only concerned with the combined ICIJ database csv files that also incorporates previously published information.
+# Done as an exploration exercise (I do not have a priori expertise in Neo4j), it is very rough on the edges (pardon the pun).
+# There are four files in the main source (rawSrc1), and the relationships are as follows:
+# countriesNW.csv:country_id ===1:n===>  node_countriesNW.csv:NODEID1 ===n:1===> nodesNW.csv:Unique_ID ===1:n===> edge
+# Disclaimer: The veracity of the information from the ICIJ-processed source is neither claimed nor disavowed.
 
+#### URL references
+# K-V pairs for the graphs published in https://panamapapers.icij.org/graphs/
+# http://pastebin.com/pern5JRF
+# Alleged leaker email to NYT
+# http://pastebin.com/rnhwJ7nN
+# 150+ raw documents that were released - Documentcloud link
+# https://www.documentcloud.org/public/search/Source:%20%22Internal%20documents%20from%20Mossack%20Fonseca%20%28Panama%20Papers%29%22/p4
+# github repo for metadata extracted from ICIJ site visualizations
+# https://github.com/amaboura/panama-papers-dataset-2016
+
+# For understanding purposes, the example rows are referenced against an existing ICIJ article extract:
+# Example extract from ICIJ source (https://www.icij.org/offshore/top-malaysian-politicians-use-offshore-secrecy-singapore):
+# "According to the leaked documents, Raja Nong Chik, who is Lembah Pantai Umno chief, is a shareholder and director of RZA International Corporation, a British Virgin Islands entity incorporated on Aug 21, 2007, through Singapore."
+
+# Neo4j loading data in Cypher Query Language by file (not import)
+# Filename: countriesNW.csv
+# Into:     c:Country
+# Description: This file is an index of country shortcodes and names.
+# Notes: Some country codes/names are not ISO-3166 compliant (grr!); for eg. SG and SN are reversed.
+# Fields: c.id (unique int), c.cc, c.name
+# Example Line:
+# "150";"MY";"Malaysia"
+LOAD CSV WITH HEADERS FROM 'file:///Users/slothdev/Dropbox/PanamaPapers/countriesNW.csv' AS line FIELDTERMINATOR ';'
+CREATE (c:Country { id: toInt(line.country_id), cc: line.country_code, name: line.country_name })
+CREATE CONSTRAINT ON (c:Country) ASSERT c.id IS UNIQUE
+CREATE CONSTRAINT ON (c:Country) ASSERT c.cc IS UNIQUE
+CREATE CONSTRAINT ON (c:Country) ASSERT c.name IS UNIQUE
+CREATE INDEX ON :Country(id)
+
+# Filename: node_countriesNW.csv
+# Into:     nc: NodeCountry
+# Entity c.id is associated with country c.cc, c.name, c.cid
+# nc.id (NOT unique int), nc.cc, nc.name, nc.cid (identity relation to c.id)
+# Example Line:
+# "72751";"MY";"Malaysia";"150"
+USING PERIODIC COMMIT 500
+LOAD CSV WITH HEADERS FROM "file:///Users/slothdev/Dropbox/PanamaPapers/node_countriesNW.csv" AS line FIELDTERMINATOR ';'
+CREATE (nc:NodeCountry { id: toInt(line.NODEID1), cc: line.country_code,
+name: line.country_name, cid: line.country_id })
+CREATE INDEX ON :NodeCountry(id)
+# CREATE CONSTRAINT ON (nc:NodeCountry) ASSERT nc.id IS UNIQUE # NOT UNIQUE!
+
+# Filename: edges_1DNW.csv
+# Into:     e: Edge
+# Description: This file defines the many-to-many entity relations of the graph.
+# Each Entity e.id HAS A relation eid1 OF eid2
+# Strangely(?) it contains specific Chinese equivalents of the description field in chinesePos
+# Notes: eid1 -> eid2 defines a relation where eid1 OF eid2 (eg. Director/Shareholder of XX company). Therefore id != eid1 != eid2
+# if direction = 1 and opposite if direction = 0
+# Fields: e.id (int), e.eid1 (int), e.eid2 (int), description,
+#         dateFrom, dateTo, direction, chinesePos, linkType
+# Sets:
+#   linkType: ["EA", "EE", "EI", "EO", "EU", "IA", "OA", "OU", "UA"]
+# Example Lines:
+# "517648";"72751";"246145";"registered address";"";"";"1";"注册地址";"OA"
+# "72751";"219558";"285729";"registered address";"";"";"1";"注册地址";"EA"
+# "157184";"72751";"164308";"Director";"Tue Aug 21 00:00:00 CST 2007";"";"1";"董事";"EO"
+# "256668";"72751";"164308";"Shareholder";"Tue Aug 21 00:00:00 CST 2007";"";"1";"股东";"EO"
+USING PERIODIC COMMIT 5000
+LOAD CSV WITH HEADERS FROM "file:///Users/slothdev/Dropbox/PanamaPapers/edges_1DNW.csv" AS line FIELDTERMINATOR ';'
+CREATE (e:Edge { id: toInt(line.Unique_ID), eid1: toInt(line.Entity_ID1), eid2: toInt(line.Entity_ID2),
+description: line.description_, dateFrom: line.date_from, dateTo: line.date_to,
+direction: line.direction, chinesePos: line.chinesePos, linkType: line.linkType })
+CREATE INDEX ON :Edge(id)
+
+#MATCH (c:Country { id: toInt(line.cid)}),(nc:NodeCountry { id: toInt(line.country_id)})
+#CREATE (c)-[:COUNTRY { name: line.name }]->(nc)
+
+# Filename: nodesNW.csv
+# Into:     nw: NodeNW
+# Description: This file defines each entity as a node.
+# Notes: Some escaped characters in description field.
+# Fields: nw.id (unique int), subtypes, description, searchField, status, descStatus,
+#         type, descCompanyType, incDat, descJurisdiction, completeAddresses, agencyID,
+#         taxStat, taxStatDescription
+# Sets:
+#   subtypes ["ADDRESS", "ENTITY", "MASTER CLIENT", "OFFICER & MASTER CLIENT", "OFFICER"]
+# Transform: Removed "\" from description in rows 159006, 163953, 175451, 177673 and 206029
+# Example Lines:
+# "72751";"OFFICER";"Raja Nong Chik Bin Raja Zainal Abidin";"Raja Nong Chik Bin Raja Zainal Abidin ";"";"";"";"";"";"";"";"";"";"1";"";""
+# "164308";"ENTITY";"RZA INTERNATIONAL CORPORATION";"RZA INTERNATIONAL CORPORATION Portcullis TrustNet Chambers P.O. Box 3444 Road Town, Tortola BRITISH VIRGIN ISLANDS";"Z";"Struck / Defunct / Deregistered";"STD";"Standard International Company";"Tue Aug 21 00:00:00 CST 2007";"";"BVI";"British Virgin Islands";"Portcullis TrustNet Chambers P.O. Box 3444 Road Town, Tortola BRITISH VIRGIN ISLANDS";"1";"BVIBC";"BVI Business Company"
+USING PERIODIC COMMIT 5000
+LOAD CSV WITH HEADERS FROM "file:///Users/slothdev/Dropbox/PanamaPapers/nodesNW.csv" AS line FIELDTERMINATOR ';'
+CREATE (n:Node { id: toInt(line[1]), subtypes: line[2],
+description: line[3], searchField: line[4],
+status: line[5], descStatus: line[6], type: line[7],
+descCompanyType: line[8], incDat: line[9],
+dormDat: line[10], juris: line[11],
+descJurisdiction: line[12],
+completeAddresses: line[13], agencyID: line[14],
+taxStat: line[15], taxStatDescription: line[16]
+})
+CREATE CONSTRAINT ON (n:Node) ASSERT n.id IS UNIQUE
+CREATE INDEX ON :Node(id)
+
+USING PERIODIC COMMIT 5000
+LOAD CSV WITH HEADERS FROM "file:///Users/slothdev/Dropbox/PanamaPapers/nodesNW.csv" AS line FIELDTERMINATOR ';'
+CREATE (n:Node { id: toInt(line.Unique_ID), subtypes: line.subtypes_,
+description: line.Description_, searchField: line.searchField_,
+status: line.status, descStatus: line.desc_status, type: line.type,
+descCompanyType: line.desc_company_type, incDat: line.inc_dat,
+dormDat: line.dorm_dat, juris: line.juris,
+descJurisdiction: line.desc_jurisdiction,
+completeAddresses: line.completeAddresses, agencyID: line.agencyID,
+taxStat: line.tax_stat, taxStatDescription: line.tax_stat_description
+})
+
+# Querying
+RETURN n.id AS id, n.subtypes AS subtypes, length(n.description) AS length
+
+# Deleting
+MATCH (n:NodeNW)
+DELETE n
+ 
