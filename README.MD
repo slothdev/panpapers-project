@@ -1,4 +1,5 @@
 # README - PanamaPapers Exercise
+Seah Poh San
 6 Apr 2016
 
 ***
@@ -12,7 +13,7 @@ The repo contains datasets collected from the following sources, organised into 
     rawSrc1           | Direct dl from ICIJ containing old/new info | [link](http://icij-uploads.s3-website-us-east-1.amazonaws.com/2013/10/offshore/csv.zip)
     rawSrc2           | Slightly different set with only node/edge files | [link](http://www.thereportertimes.com/panama-papers-icij-offshore-leaks-database-documents/23489/)
     rawSrcAmaboura    | Amaboura's github repo for metadata extracted from ICIJ site visualizations | [link](https://github.com/amaboura/panama-papers-dataset-2016)
-    rawSummaryGraphs: K-V pairs for the ICIJ [summary graphs](https://panamapapers.icij.org/graphs/) | [link](http://pastebin.com/pern5JRF)
+    rawSummaryGraphs  | K-V pairs for the ICIJ [summary graphs](https://panamapapers.icij.org/graphs/) | [link](http://pastebin.com/pern5JRF)
 
 Documents pertaining to the datasets background:
 
@@ -24,7 +25,7 @@ Documents pertaining to the datasets background:
 This project only focuses on rawSrc1 as those files were directly obtained from the ICIJ source comprising both older and newer information. There are four files which generally have the following relationships:
 countriesNW.csv:country_id ===1:n===>  node_countriesNW.csv:NODEID1 ===n:1===> nodesNW.csv:Unique_ID ===1:n===> edges_1DNW.csv:Unique_ID
 
-A description of the ETL for rawSrc1 is currently stored in the [project folder](https://github.com/slothdev/panpapers-project/project/)
+A more detailed description of the ETL for rawSrc1 is currently stored in the [project folder](https://github.com/slothdev/panpapers-project/etl/)
 
 > Disclaimer
 
