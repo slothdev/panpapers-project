@@ -1,4 +1,4 @@
-> Manifest of rawSrc2.zip
+Manifest of rawSrc2.zip
 
 rows | filename
 -----|---------
