@@ -23,9 +23,12 @@ Documents pertaining to the datasets background:
     N.A.    | Documentcloud of 150+ raw documents released  | [link](https://www.documentcloud.org/public/search/Source:%20%22Internal%20documents%20from%20Mossack%20Fonseca%20%28Panama%20Papers%29%22/p4)
 
 This project only focuses on rawSrc1 as those files were directly obtained from the ICIJ source comprising both older and newer information. There are four files which generally have the following relationships:
+
 countriesNW.csv:country_id ===1:n===>  node_countriesNW.csv:NODEID1 ===n:1===> nodesNW.csv:Unique_ID ===1:n===> edges_1DNW.csv:Unique_ID
 
 A more detailed description of the ETL for rawSrc1 is currently stored in the [project folder](https://github.com/slothdev/panpapers-project/etl/)
+
+The source appeared to have been taken through the Drupal CMS [see link in French](https://reflets.info/panamapapers-how-shit-happens)
 
 > Disclaimer
 
