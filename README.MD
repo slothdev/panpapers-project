@@ -1,4 +1,4 @@
-# README - PanamaPapers Exercise
+# README - PP Exercise
 Seah Poh San
 6 Apr 2016
 
