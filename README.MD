@@ -1,6 +1,6 @@
 # README - PP Exercise
-Seah Poh San
-6 Apr 2016
+### 6 Apr 2016
+### SPS
 
 ***
 
