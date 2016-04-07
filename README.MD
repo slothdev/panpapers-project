@@ -28,7 +28,7 @@ countriesNW.csv:country_id ===1:n===>  node_countriesNW.csv:NODEID1 ===n:1===> n
 
 A more detailed description of the ETL for rawSrc1 is currently stored in the [project folder](https://github.com/slothdev/panpapers-project/etl/)
 
-The source appeared to have been taken through the Drupal CMS [see link in French](https://reflets.info/panamapapers-how-shit-happens)
+The "papers" themselves appeared to have been taken through the law firm's Drupal CMS [see link in French](https://reflets.info/panamapapers-how-shit-happens)
 
 > Disclaimer
 
