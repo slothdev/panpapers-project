@@ -1,5 +1,8 @@
+# ETL.txt (this file is a WIP)
+#
 # Author: Edwin Seah Poh San
 # DateCreated: 20160406
+#
 # DataSource: http://icij-uploads.s3-website-us-east-1.amazonaws.com/2013/10/offshore/csv.zip
 # Readme: This ETL file contains notes for the loading of the dataset from ICIJ into
 # a graph database (Neo4j). There is another set in circulation which only includes nodes/edges.
