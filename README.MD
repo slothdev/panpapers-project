@@ -4,7 +4,7 @@
 
 > Updates
 
-13 Apr 2016: Pls refer to http://www.unicornriot.ninja/?p=5357 for a detailed description of the nature of the leak (it is the CMS portal belonging to the law firm which they used to store/manage their clients' entities' documents, as well as allowing their clients to access them.) Presumably, the ICIJ datasets released as graph info are built upon processing of the raw documents found in this document store.
+13 Apr 2016: Pls refer to http://www.unicornriot.ninja/?p=5357 for a detailed description of the nature of the leak (it is the CMS portal belonging to the law firm which they used to store/manage their clients' entities' documents, as well as allowing their clients to access them.) Presumably, there are processed for building out the entity relationship graph. The resultant ICIJ set may or may not have been updated with those from the later leaks.
 
 ***
 
